@@ -1,4 +1,5 @@
 {
     "42header.email": "rhernand@student.42malaga.com",
-    "42header.username": "rhernand"
+    "42header.username": "rhernand",
+    "github.gitProtocol": "ssh"
 }
