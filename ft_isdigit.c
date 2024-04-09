@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 18:08:35 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/09 21:32:05 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/09 21:19:38 by rhernand          #+#    #+#             */
+/*   Updated: 2024/04/09 21:29:03 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <ctype.h>*/
+/* #include <stdio.h>
+#include <ctype.h> */
 
-int ft_isalpha(int c)
+int ft_isdigit(int c)
 {
-    if  ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+    if  (c >= '0' && c <= '9')
         return (1);
     else
         return (0);
@@ -23,12 +23,12 @@ int ft_isalpha(int c)
 
 /*int    main(void)
 {
-    printf("%i\n", ft_isalpha('?'));
+    printf("%i\n", ft_isdigit('9'));
     return (0);
 }
 
 int    main(void)
 {
-    printf("%i\n",isalpha('p'));
-    return ;
+    printf("%i\n",isdigit('3'));
+    return (0);
 }*/
