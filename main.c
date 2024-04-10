@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 21:19:38 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/10 19:10:23 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/10 19:11:36 by rhernand          #+#    #+#             */
+/*   Updated: 2024/04/10 19:13:21 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h>
-#include <ctype.h> */
+#include "libft.h"
+#include <ctype.h>
 
-int	ft_isdigit(int c)
+int	main(void)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	printf("%i\n", isdigit('3'));
+	return (0);
 }

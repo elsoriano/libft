@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 21:19:38 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/10 19:10:23 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/10 18:47:35 by rhernand          #+#    #+#             */
+/*   Updated: 2024/04/10 19:19:33 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h>
-#include <ctype.h> */
-
-int	ft_isdigit(int c)
+int	ft_isascii(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c <= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
