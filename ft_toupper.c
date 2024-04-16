@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 19:11:36 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/10 19:13:21 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/16 20:27:17 by rhernand          #+#    #+#             */
+/*   Updated: 2024/04/16 20:47:22 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <ctype.h>
+/*#include <ctype.h>
+#include <stdio.h>*/
 
-int	main(void)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-	printf("%i\n", isdigit('3'));
-	return (0);
+	if (c > 96 && c < 123)
+		return (c - 32);
+	return (c);
 }
+
+/*int	main(void)
+{
+	int	c;
+
+	c = 'z';
+	printf("toupper result = %c\n", toupper(c));
+	printf("ft_toupper result = %c\n", ft_toupper(c));
+	return (0);
+}*/

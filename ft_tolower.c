@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 18:47:35 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/15 21:31:31 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/16 20:48:08 by rhernand          #+#    #+#             */
+/*   Updated: 2024/04/16 20:49:21 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <ctype.h>*/
+/*#include <ctype.h>
+#include <stdio.h>*/
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	if (c > 64 && c < 91)
+		return (c + 32);
+	return (c);
 }
 
 /*int	main(void)
 {
-	printf("isascii result = %d\n", isascii(127));
-	printf("ft_isascii result = %d\n", ft_isascii(127));
+	int	c;
+
+	c = 'A';
+	printf("tolower result = %c\n", tolower(c));
+	printf("ft_tolower result = %c\n", ft_tolower(c));
+	return (0);
 }*/

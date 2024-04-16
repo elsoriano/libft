@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 18:47:35 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/15 21:31:31 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/11 19:44:10 by rhernand          #+#    #+#             */
+/*   Updated: 2024/04/11 20:03:25 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <ctype.h>*/
+#include "libft.h"
 
-int	ft_isascii(int c)
+t_size	ft_strlcpy(char *dest, char *src, t_size dstsize)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	unsigned int	i;
+
+	i = 0;
+	while (dstsize != 0 && i < dstsize - 1 && src[i])
+	{
+		dest[i] = src[i];
+		++i;
+	}
+	if (i < dstsize)
+		dest[i] = '\0';
+	while (src[i])
+		++i;
+	return (i);
 }
-
-/*int	main(void)
-{
-	printf("isascii result = %d\n", isascii(127));
-	printf("ft_isascii result = %d\n", ft_isascii(127));
-}*/
