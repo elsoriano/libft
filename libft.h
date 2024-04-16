@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:37:42 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/16 22:11:46 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/04/16 23:17:14 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 char			*ft_strchr(char *s, int c);
 char			*ft_strrchr(char *s, int c);
+int				ft_strncmp(const char *s1, const char *s2, t_size n);
 
 #endif
