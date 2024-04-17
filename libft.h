@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:37:42 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/17 21:35:12 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/04/17 21:59:03 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ char			*ft_strchr(char *s, int c);
 char			*ft_strrchr(char *s, int c);
 int				ft_strncmp(const char *s1, const char *s2, t_size n);
 void			*ft_memchr(const void *s, int c, size_t n);
+void			*ft_memset(void *b, int c, size_t len);
 
 #endif
