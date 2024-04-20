@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 19:44:14 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/20 21:04:15 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/20 19:50:19 by rhernand          #+#    #+#             */
+/*   Updated: 2024/04/20 20:43:12 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+/* #include <stdio.h> */
 #include "libft.h"
-/*#include "stdio.h"*/
 
-size_t	ft_strlen(const char *s)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	j;
+	void	*buff;
 
-	j = 0;
-	while (s[j] != '\0')
-	{
-		j++;
-	}
-	return (j);
+	buff = malloc(count * size);
+	if (buff == NULL)
+		return (NULL);
+	ft_bzero(buff, count * size);
+	return (buff);
 }
 
-/*int	main(void)
+/* int	main(void)
 {
-	printf("ft_strlen %lu\n", ft_strlen("hola"));
-}*/
+	char	*buffer;
+
+	buffer = (char *) ft_calloc(5, sizeof(char));
+	buffer[4] = 'a';
+	printf("What is in buffer[4] %c\n", buffer[4]);
+} */

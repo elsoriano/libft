@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:10:21 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/20 19:32:46 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:35:36 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ int	ft_atoi(const char *str)
 	n = 0;
 	i = 0;
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-		|| str[i] == '\v' || str[i] == '\f'
-		|| str[i] == '\f' || str[i] == '\r')
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
