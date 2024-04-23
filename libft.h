@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:37:42 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/23 14:36:31 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/04/23 21:00:12 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int				ft_isdigit(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
 size_t			ft_strlen(const char *s);
-t_size			ft_strlcpy(char *dst, char *src, t_size dstsize);
+size_t			ft_strlcpy(char *dst, char *src, t_size dstsize);
 t_size			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strnstr(char *haystack, char *needle, t_size len);
 int				ft_toupper(int c);
@@ -45,5 +45,6 @@ void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s1);
 char			*ft_substr(const char *s, unsigned int start, size_t len);
 char			*ft_strjoin(const char *s1, const char *s2);
+char			**ft_split(const char *s, char c);
 
 #endif
