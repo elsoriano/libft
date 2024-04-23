@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:37:42 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/20 21:02:44 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:36:31 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <xlocale.h>
+# include <stdio.h>
 
 typedef unsigned long	t_size;
 
@@ -42,5 +43,7 @@ int				ft_memcmp(void *s1, void *s2, size_t n);
 int				ft_atoi(const char *str);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s1);
+char			*ft_substr(const char *s, unsigned int start, size_t len);
+char			*ft_strjoin(const char *s1, const char *s2);
 
 #endif
