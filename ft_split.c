@@ -6,72 +6,22 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 19:48:05 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/23 23:04:40 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/04/24 20:11:54 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_fillmatrix(char **matrix, const char *s, char c)
+static int	ft_start(const char *s1, char c)
 {
-	int		x;
-	int		y;
-	int		i;
-
-	x = 0;
-	y = 0;
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-		{
-			matrix[x][y] = '\0';
-			x++;
-			y = 0;
-		}
-		matrix[x][y] = s[i];
-		i++;
-		y++;
-	}
-	matrix[x][y] = '\0';
-	matrix[x + 1] = NULL;
-	printf("s = %s\n", s);
-	return ;
-}
-
-static char	**ft_cmatrix(unsigned int bks, size_t maxlen)
-{
-	char			**matrix;
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	matrix = (char **) malloc((bks + 1) * sizeof(char *));
-	if (!matrix)
-		return (NULL);
-	while (i <= bks)
+	while (s1[i + 1] != c && s1[i])
 	{
-		matrix[i] = (char *) malloc((maxlen + 1) * sizeof(char));
-		if (!matrix[i])
-			return (NULL);
 		i++;
 	}
-	return (matrix);
-}
-
-static size_t	ft_maxlen(const char *s, char c)
-{
-	size_t	max;
-	size_t	i;
-
-	max = 0;
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c && max < i)
-			max = i;
-		i++;
-	}
-	return (max);
+	return (i + 1);
 }
 
 static int	ft_breaks(const char *s, char c)
@@ -92,16 +42,29 @@ static int	ft_breaks(const char *s, char c)
 
 char	**ft_split(const char *s, char c)
 {
-	size_t	bks;
-	size_t	mx_len;
-	char	**matrix;
+	char	**str;
+	int		i;
+	int		len;
+	int		start;
+	int		breaks;
 
-	mx_len = ft_maxlen(s, c);
-	bks = ft_breaks(s, c);
-	matrix = ft_cmatrix(bks, mx_len);
-	ft_fillmatrix(matrix, s, c);
-	free (matrix);
-	return (matrix);
+	i = 0;
+	start = 0;
+	len = 0;
+	breaks = ft_breaks(s, c);
+	str = (char **) malloc ((breaks + 2) * sizeof(char *));
+	if (!str)
+		return (NULL);
+	while (i <= breaks)
+	{
+		len = ft_start(s, c);
+		str[i] = ft_substr(s, 0, len);
+		s = s + len;
+		i++;
+	}
+	str[i] = NULL;
+	free (str);
+	return (str);
 }
 
 /* int	main(void)
@@ -112,7 +75,7 @@ char	**ft_split(const char *s, char c)
 	char		**matrix;
 
 	i = 0;
-	c = 'a';
+	c = 'm';
 	matrix = ft_split(str, c);
 	while (matrix[i])
 	{
