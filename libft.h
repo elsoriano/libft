@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:37:42 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/23 21:00:12 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/04/25 18:57:35 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ char			*ft_strdup(const char *s1);
 char			*ft_substr(const char *s, unsigned int start, size_t len);
 char			*ft_strjoin(const char *s1, const char *s2);
 char			**ft_split(const char *s, char c);
+char			*ft_itoa(int n);
 
 #endif
