@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 20:53:36 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/16 22:03:40 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:33:52 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 #include "libft.h"
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
@@ -26,11 +26,11 @@ char	*ft_strchr(char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c % 256)
-			return (&s[i]);
+			return ((char *) &s[i]);
 		i++;
 	}
 	if (s[i] == c % 256)
-		return (&s[i]);
+		return ((char *) &s[i]);
 	return (NULL);
 }
 
