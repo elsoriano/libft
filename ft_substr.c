@@ -6,32 +6,32 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 10:59:28 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/24 17:04:23 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/04/29 14:02:14 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h>
-#include <string.h> */
-
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
-	size_t			s_len;
 	char			*buff;
+	size_t			slen;
 
-	s_len = ft_strlen(s);
+	slen = ft_strlen(s);
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (s_len <= (size_t) start || !len)
-		len = 0;
+	if (start >= slen)
+	{
+		return (ft_strdup("\0"));
+	}
+	else if (slen - start < len)
+		len = slen - start;
 	buff = (char *) malloc((len + 1) * sizeof(char));
 	if (buff == NULL)
 		return (NULL);
-	while (s[start] && i < len)
+	while (s[start] && i < len && len != 0)
 	{
 		buff[i] = s[start + i];
 		i++;
@@ -42,8 +42,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 /* int	main(void)
 {
-	char	str[] = "lorem ipsum";
-
-	printf("resutl ft_substr = %s\n", ft_substr(str, 0, 0));
+	printf("resutl ft_substr = %s\n", ft_substr("", 1, 1));
 	return (0);
 } */
