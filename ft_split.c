@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 19:40:22 by rhernand          #+#    #+#             */
-/*   Updated: 2024/05/01 22:25:58 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/05/01 22:39:50 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,8 @@ char	**ft_fill(const char *s, const char c)
 
 char	**ft_split(const char *s, const char c)
 {
-	int		i;
 	char	**ptr;
-
-	i = 0;
+	
 	if (!s)
 		return (NULL);
 	ptr = ft_fill(s, c);
