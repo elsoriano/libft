@@ -67,7 +67,7 @@ char	**ft_fill(const char *s, const char c)
 char	**ft_split(const char *s, const char c)
 {
 	char	**ptr;
-	
+
 	if (!s)
 		return (NULL);
 	ptr = ft_fill(s, c);
