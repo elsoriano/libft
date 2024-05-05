@@ -6,7 +6,7 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 10:19:55 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/05/05 10:39:01 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/05/05 11:52:31 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst)
+	while (lst->next)
 		lst = lst->next;
 	return (lst);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	t_list	*node1;
 	t_list	*node2;
@@ -34,4 +34,4 @@ int	main(void)
 	node2->next = NULL;
 	printf("lst size = %d\n", ft_lstsize(node1));
 	printf("ultimo elemento = %s\n", (char *)ft_lstlast(node1)->content);	
-}
+} */
