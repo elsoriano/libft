@@ -6,7 +6,7 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 12:07:27 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/05/07 13:13:51 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/05/07 17:01:19 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,28 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *))
 {
-	t_list	**nlst;
-	t_list	*nxtnd;
+	t_list	*fnode;
 	t_list	*nwnd;
 
-	nlst = malloc(sizeof(t_list *));
-	if (!nlst || !lst)
+	if (!lst)
 		return (NULL);
-	nwnd = *nlst;
-	while (nwnd)
+	nwnd = ft_lstnew(f(lst->content));
+	fnode = nwnd;
+	while (lst->next)
 	{
-		nwnd = ft_lstnew(strdup(f(lst->content)));
-		if (!nwnd)
+		lst = lst->next;
+		nwnd->next = ft_lstnew(f(lst->content));
+		if (!nwnd->next)
 		{
-			ft_lstclear(nlst, ft_lstdelone);
+			ft_lstclear(&fnode, del);
 			return (NULL);
 		}
-		nxtnd = lst->next;
-		if (nxtnd)
-			nwnd->next = ft_lstnew(strdup(f(nxtnd->content)));
-		nwnd = nxtnd;
+		nwnd = nwnd->next;
 	}
-	nwnd->next = NULL;
-	return (*nlst);
+	return (fnode);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	t_list	**lst;
 	t_list	*aux;
@@ -47,14 +43,14 @@ int	main(void)
 	lst = malloc(sizeof(t_list *));
 	if (!lst)
 		return (1);
-	*lst = ft_lstnew(strdup("first"));
-	ft_lstadd_back(lst, strdup("second"));
-	ft_lstadd_back(lst, strdup("third"));
-	ft_lstadd_back(lst, strdup("fourth"));
+	*lst = ft_lstnew(ft_strdup("first"));
+	ft_lstadd_back(lst, (void *) ft_strdup("second"));
+	ft_lstadd_back(lst, (void *) ft_strdup("third"));
+	ft_lstadd_back(lst, (void *) ft_strdup("fourth"));
 	aux = *lst;
 	while (aux)
 	{
-		printf("%s\n", aux->content);
+		printf("%s\n", (char *) aux->content);
 		aux = aux->next;
 	}
-}
+} */
