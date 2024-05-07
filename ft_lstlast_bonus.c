@@ -6,7 +6,7 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 10:19:55 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/05/07 09:02:30 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/05/07 09:40:49 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return NULL;
+		return (NULL);
 	while (lst->next)
 		lst = lst->next;
 	return (lst);

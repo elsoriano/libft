@@ -6,7 +6,7 @@
 /*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 11:54:41 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/05/05 13:26:26 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/05/07 09:40:08 by rodrigo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,18 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*node;
-	
-	if (!new)
-		return;
-	if (!*lst)
-		ft_lstadd_front(lst, new);
-	node = ft_lstlast(*lst);
+
+	node = *lst;
+	if (!new || !lst)
+		return ;
+	if (!node)
+	{
+		*lst = new;
+		return ;
+	}
+	node = ft_lstlast(node);
 	node->next = new;
-	new->next = NULL;
+	return ;
 }
 
 /* int	main(void)
