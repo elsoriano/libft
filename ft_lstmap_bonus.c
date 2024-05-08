@@ -3,34 +3,51 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rodrigo <rodrigo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 12:07:27 by rodrigo           #+#    #+#             */
-/*   Updated: 2024/05/07 17:01:19 by rodrigo          ###   ########.fr       */
+/*   Updated: 2024/05/08 14:20:43 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void	ft_clearlst(t_list	*lst, void (*del) (void *))
+{
+	t_list	*aux;
+
+	while (lst)
+	{
+		aux = lst;
+		lst = aux->next;
+		del(aux->content);
+		free (aux);
+	}
+}
+
 t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *))
 {
 	t_list	*fnode;
 	t_list	*nwnd;
+	t_list	*aux;
+	void	*content;
 
-	if (!lst)
+	if (!lst || !f || !del)
 		return (NULL);
-	nwnd = ft_lstnew(f(lst->content));
-	fnode = nwnd;
-	while (lst->next)
+	fnode = NULL;
+	aux = lst;
+	while (aux)
 	{
-		lst = lst->next;
-		nwnd->next = ft_lstnew(f(lst->content));
-		if (!nwnd->next)
+		content = f(aux->content);
+		nwnd = ft_lstnew(content);
+		if (!nwnd)
 		{
-			ft_lstclear(&fnode, del);
+			del(content);
+			ft_clearlst(fnode, del);
 			return (NULL);
 		}
-		nwnd = nwnd->next;
+		ft_lstadd_back(&fnode, nwnd);
+		aux = aux->next;
 	}
 	return (fnode);
 }
