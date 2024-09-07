@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:37:42 by rhernand          #+#    #+#             */
-/*   Updated: 2024/05/08 11:00:54 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/19 12:03:53 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int			ft_isdigit(int c);
 int			ft_isascii(int c);
 int			ft_isprint(int c);
 size_t		ft_strlen(const char *s);
-size_t		ft_strlcpy(char *dst, char *src, t_size dstsize);
-t_size		ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t		ft_strlcpy(char *dst, char *src, size_t dstsize);
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 char		*ft_strnstr(char *haystack, char *needle, t_size len);
 int			ft_toupper(int c);
 int			ft_tolower(int c);

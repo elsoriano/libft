@@ -6,12 +6,13 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 19:44:14 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/20 21:04:15 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/07 15:21:36 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include "stdio.h"*/
+
+/*Finds length of string s and returns it*/
 
 size_t	ft_strlen(const char *s)
 {

@@ -6,14 +6,15 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 22:36:16 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/16 23:16:51 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/07 15:21:21 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <string.h>*/
-
 #include "libft.h"
+
+/*Compares n bytes of srtings s1 & s2.
+When if finds a difference, returns the result of substracting
+characters of s1 - s2*/
 
 int	ft_strncmp(const char *s1, const char *s2, t_size n)
 {

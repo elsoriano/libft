@@ -6,25 +6,21 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 20:32:08 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/24 20:11:20 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/07 15:22:16 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Hay que crear un buffer con el size que quieras que sea el total del string. 
-Si size <= dst, la función devuelve size + src.
-Si el size >= que dst, la función devuelve dst + src.
-
-#include <string.h>
-#include <stdio.h>*/
-
 #include "libft.h"
 
-t_size	ft_strlcat(char *dst, const char *src, size_t dstsize)
+/*Concatenates dstsize bytes of string src in string dst.
+Returns size of src + dstsize if dst is not big enough.
+Otherwise returns lenght of src + dst*/
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	t_size	dst_size;
-	t_size	dst_count;
-	t_size	src_count;
+	size_t	dst_size;
+	size_t	dst_count;
+	size_t	src_count;
 
 	dst_size = ft_strlen(dst);
 	dst_count = dst_size;

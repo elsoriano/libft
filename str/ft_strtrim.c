@@ -6,11 +6,16 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:45:27 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/29 13:14:26 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/07 15:20:49 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*Cuts chars contained in string set from the beggining
+and the end of string s1. Stops cutting when it finds a character
+that is not in string set. 
+Allocates space and returns resulting string*/
 
 char	*ft_strtrim(const char *s1, const char *set)
 {

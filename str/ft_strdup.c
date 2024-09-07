@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 20:46:00 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/20 21:09:19 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/07 14:48:02 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <stdlib.h>
 #include "libft.h"
+
+/*Allocates space and copies string s1. Returns copied string.*/
 
 char	*ft_strdup(const char *s1)
 {

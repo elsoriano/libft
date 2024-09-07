@@ -6,13 +6,16 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:44:10 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/23 19:58:20 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/07 14:59:41 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size	ft_strlcpy(char *dest, char *src, size_t dstsize)
+/*Copies dstsize bytes of src in dst.
+Returns length of src.*/
+
+size_t	ft_strlcpy(char *dest, char *src, size_t dstsize)
 {
 	unsigned int	i;
 

@@ -6,16 +6,14 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 22:06:04 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/16 22:28:58 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/07 15:10:22 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* if '\0' is passed it should locate the null caracter of the string
-
-#include <string.h>
-#include <stdio.h>
-*/
 #include "libft.h"
+
+/*Locates c char in s string from end to beginning. If '\0' is passed
+it locates end of string. Returns pointer to char found*/
 
 char	*ft_strrchr(char *s, int c)
 {

@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 12:13:57 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/26 12:52:22 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/23 10:59:28 by rhernand          #+#    #+#             */
+/*   Updated: 2024/09/07 15:16:55 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* char	ft_char2u(unsigned int n, char c)
-{
-	char	a;
+/*Allocates and copies the part of string s 
+starting in byte start and for len bytes.*/
 
-	n = 0;
-	a = c + 1;
-	return (a);
-} */
-
-char	*ft_strmapi(const char *s, char (*f) (unsigned int, char))
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
 	char			*buff;
+	size_t			slen;
 
-	buff = malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (!buff)
-		return (NULL);
+	slen = ft_strlen(s);
 	i = 0;
-	while (s[i])
+	if (!s)
+		return (NULL);
+	if (start >= slen)
 	{
-		buff[i] = f(i, s[i]);
+		return (ft_strdup("\0"));
+	}
+	else if (slen - start < len)
+		len = slen - start;
+	buff = (char *) malloc((len + 1) * sizeof(char));
+	if (buff == NULL)
+		return (NULL);
+	while (s[start] && i < len && len != 0)
+	{
+		buff[i] = s[start + i];
 		i++;
 	}
 	buff[i] = '\0';
@@ -41,9 +45,6 @@ char	*ft_strmapi(const char *s, char (*f) (unsigned int, char))
 
 /* int	main(void)
 {
-	char	str[] = "Hola";
-
-	printf("string inicial = %s\n", str);
-	printf("result = %s\n", ft_strmapi(str, ft_char2u));
+	printf("resutl ft_substr = %s\n", ft_substr("", 1, 1));
 	return (0);
 } */

@@ -1,47 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 10:59:28 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/29 14:26:29 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/23 14:18:59 by rhernand          #+#    #+#             */
+/*   Updated: 2024/09/07 14:54:38 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
-{
-	unsigned int	i;
-	char			*buff;
-	size_t			slen;
+/*Takes 2 strings. Allocates space and joins them together. 
+Returns the joined string. If there is an error, returns NULL*/
 
-	slen = ft_strlen(s);
+char	*ft_strjoin(const char *s1, const char *s2)
+{
+	size_t	j;
+	size_t	i;
+	char	*buff;
+
+	if (!s1 && !s2)
+		return (NULL);
+	j = 0;
+	buff = (char *) malloc((ft_strlen(s2) + ft_strlen(s1) + 1) * sizeof(char));
+	if (!buff)
+		return (NULL);
 	i = 0;
-	if (!s)
-		return (NULL);
-	if (start >= slen)
+	while (s1[i])
 	{
-		return (ft_strdup("\0"));
-	}
-	else if (slen - start < len)
-		len = slen - start;
-	buff = (char *) malloc((len + 1) * sizeof(char));
-	if (buff == NULL)
-		return (NULL);
-	while (s[start] && i < len && len != 0)
-	{
-		buff[i] = s[start + i];
+		buff[i] = s1[i];
 		i++;
 	}
+	while (s2[j])
+		buff[i++] = s2[j++];
 	buff[i] = '\0';
 	return (buff);
 }
 
 /* int	main(void)
 {
-	printf("resutl ft_substr = %s\n", ft_substr("", 1, 1));
+	printf("result ft_strjoin = %s\n", ft_strjoin("pru", "oronga"));
 	return (0);
 } */

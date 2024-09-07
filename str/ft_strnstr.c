@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 19:15:19 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/15 23:09:25 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/07 15:08:09 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ else returns pointer to first char of needle in haystack
 */
 
 #include "libft.h"
+
+/*Finds string needle in string haystack whitin len bytes.
+returns pointer to first byte of needle in haystack*/
 
 char	*ft_strnstr(char *haystack, char *needle, t_size len)
 {
