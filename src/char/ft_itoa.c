@@ -6,11 +6,13 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 18:38:17 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/25 20:12:09 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/08 12:49:11 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*Finds digits of int n to allocate space for new string*/
 
 static unsigned int	ft_pos(int n)
 {
@@ -28,6 +30,10 @@ static unsigned int	ft_pos(int n)
 	}
 	return (pos);
 }
+
+/*Converts int n to string.
+Allocates space for new string 
+Returns pointer to created string*/
 
 char	*ft_itoa(int n)
 {
@@ -54,12 +60,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-/* int	main(void)
-{
-	int		n;
-
-	n = -46;
-	printf("result = %s\n", ft_itoa(n));
-	return (0);
-} */

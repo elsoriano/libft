@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 18:47:35 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/15 21:31:31 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/08 18:08:35 by rhernand          #+#    #+#             */
+/*   Updated: 2024/09/08 12:42:31 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <ctype.h>*/
+/*Checks if char c is a letter.
+Returns 1 if true*/
 
-int	ft_isascii(int c)
+int	ft_isalpha(int c)
 {
-	if (c >= 0 && c <= 127)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);
 }
-
-/*int	main(void)
-{
-	printf("isascii result = %d\n", isascii(127));
-	printf("ft_isascii result = %d\n", ft_isascii(127));
-}*/

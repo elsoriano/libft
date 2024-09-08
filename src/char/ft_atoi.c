@@ -6,17 +6,11 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:10:21 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/20 19:35:36 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/09/08 12:40:33 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*if " " keep moving
-if "-" minus sign
-if "--" return 0
-if other. return 0 */
-
-/* #include <stdio.h>
-#include <stdlib.h> */
+/*Converts string str to int. Returns converted int*/
 
 int	ft_atoi(const char *str)
 {

@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 21:19:38 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/10 19:10:23 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/16 20:27:17 by rhernand          #+#    #+#             */
+/*   Updated: 2024/09/08 12:49:23 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h>
-#include <ctype.h> */
+#include "libft.h"
 
-int	ft_isdigit(int c)
+/*Converts char c into uppercase if it finds lowecase.
+Returns converted char (as int)*/
+
+int	ft_toupper(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	if (c > 96 && c < 123)
+		return (c - 32);
+	return (c);
 }
+
+/*int	main(void)
+{
+	int	c;
+
+	c = 'z';
+	printf("toupper result = %c\n", toupper(c));
+	printf("ft_toupper result = %c\n", ft_toupper(c));
+	return (0);
+}*/

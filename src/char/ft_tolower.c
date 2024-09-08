@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 20:27:17 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/16 20:47:22 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/16 20:48:08 by rhernand          #+#    #+#             */
+/*   Updated: 2024/09/08 12:45:30 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,13 @@
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+/*Converts char c to lowercase if it finds uppercase.
+Returns converted char (as int)*/
+
+int	ft_tolower(int c)
 {
-	if (c > 96 && c < 123)
-		return (c - 32);
+	if (c > 64 && c < 91)
+		return (c + 32);
 	return (c);
 }
 
@@ -26,8 +29,8 @@ int	ft_toupper(int c)
 {
 	int	c;
 
-	c = 'z';
-	printf("toupper result = %c\n", toupper(c));
-	printf("ft_toupper result = %c\n", ft_toupper(c));
+	c = 'A';
+	printf("tolower result = %c\n", tolower(c));
+	printf("ft_tolower result = %c\n", ft_tolower(c));
 	return (0);
 }*/

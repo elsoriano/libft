@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 10:30:13 by rhernand          #+#    #+#             */
-/*   Updated: 2024/04/10 19:06:32 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/10 19:20:59 by rhernand          #+#    #+#             */
+/*   Updated: 2024/09/08 12:43:52 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*Checks if char c is a printable char.
+Returns 1 if true.*/
 
-int	ft_isalnum(int c)
+int	ft_isprint(int c)
 {
-	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
