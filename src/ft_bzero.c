@@ -6,10 +6,9 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:16:20 by rhernand          #+#    #+#             */
-/*   Updated: 2024/09/09 19:31:26 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/10/18 09:52:47 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../inc/libft.h"
 
