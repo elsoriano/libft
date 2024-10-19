@@ -46,7 +46,8 @@ SRCFILES = ft_bzero.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
-			ft_lstmap.c
+			ft_lstmap.c \
+			ft_get_next_line.c
 SRCS = $(addprefix $(SRCSDIR)/, $(SRCFILES))
 OBJSDIR = obj
 OBJS = $(patsubst $(SRCSDIR)/%.c, $(OBJSDIR)/%.o, $(SRCS))
