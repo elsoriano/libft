@@ -6,12 +6,12 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 12:47:39 by rhernand          #+#    #+#             */
-/*   Updated: 2024/11/01 12:10:07 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/11/01 12:53:26 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_update_stack(char *stack)
 {
@@ -105,19 +105,21 @@ char	*ft_get_next_line(int fd)
 	stack[fd] = ft_update_stack(stack[fd]);
 	return (free(tmp), line);
 }
-int main(int argc, char **argv)
+/*int main(int argc, char **argv)
 {
 	char	*line;
 	int		fd;
-	
+
+	if (argc != 2)
+		return (1);
 	fd = open(argv[1], O_RDONLY, 0);
 	while (1)
 	{
+		line = ft_get_next_line(fd);
 		if (!line)
 			break;
-		line = ft_get_next_line(fd);
 		printf("%s", line);
 		free(line);
 	}
 	return (0);
-}
+}*/
