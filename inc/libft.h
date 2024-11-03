@@ -6,14 +6,14 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:37:42 by rhernand          #+#    #+#             */
-/*   Updated: 2024/10/19 13:24:09 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/11/03 17:57:38 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 6
+#  define BUFFER_SIZE 500
 # endif
 # ifndef FD_MAX
 #  define FD_MAX 256
